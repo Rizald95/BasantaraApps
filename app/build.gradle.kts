@@ -50,39 +50,7 @@ dependencies {
     //Android KTX
     implementation("androidx.core:core-ktx:1.13.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation ("androidx.activity:activity-ktx:1.8.2")
-    implementation("androidx.fragment:fragment-ktx:1.6.2")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 
-
-    implementation("com.loopj.android:android-async-http:1.4.11")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-common-java8:2.7.0")
-
-
-    //Testing
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-    //Retrofit
-    implementation("io.coil-kt:coil:2.4.0")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
-
-    //splashscreen
-    implementation("androidx.core:core-splashscreen:1.0.1")
-
-    //Tensorflow
-    implementation("org.tensorflow:tensorflow-lite-metadata:0.1.0")
-    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4")
-
-    //uCrop
-    implementation("com.github.yalantis:ucrop:2.2.8")
 
 
 }
