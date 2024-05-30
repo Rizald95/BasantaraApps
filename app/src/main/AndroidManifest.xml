@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BasantaraApps"
         tools:targetApi="31">
-
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".interfaces.home.MainActivity"
             android:exported="true">
