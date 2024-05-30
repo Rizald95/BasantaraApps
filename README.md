@@ -44,3 +44,4 @@ Kami menyambut kontribusi dari siapa saja. Untuk berkontribusi, silakan fork rep
 
 ## Lisensi
 Proyek ini dilisensikan di bawah lisensi MIT. Lihat file [LICENSE](LICENSE) untuk informasi lebih lanjut.
+cek
