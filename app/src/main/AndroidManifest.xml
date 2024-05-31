@@ -13,6 +13,21 @@
         android:theme="@style/Theme.BasantaraApps"
         tools:targetApi="31">
         <activity
+            android:name=".interfaces.upload.UploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interfaces.scanning.ScanningActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interfaces.alphabet.ListAlphabet"
+            android:exported="false" />
+        <activity
+            android:name=".interfaces.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".interfaces.login.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
