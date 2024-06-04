@@ -97,7 +97,7 @@
                 android:gravity=""
                 android:hint="Masukan password anda"
                 android:padding="1dp"
-                android:layout_marginBottom="1"
+                android:layout_marginBottom="1sp"
                 android:paddingStart="29sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/ivEye"
