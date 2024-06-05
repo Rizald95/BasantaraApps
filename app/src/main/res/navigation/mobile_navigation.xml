@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="lastsubmission.capstone.basantaraapps.interfaces.home.ui.notifications.NotificationsFragment"
+        android:name="lastsubmission.capstone.basantaraapps.interfaces.home.ui.profiles.ProfilesFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profiles" />
 </navigation>

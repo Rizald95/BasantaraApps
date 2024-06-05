@@ -1,10 +1,10 @@
-package lastsubmission.capstone.basantaraapps.interfaces.home.ui.notifications
+package lastsubmission.capstone.basantaraapps.interfaces.home.ui.profiles
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class ProfilesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is notifications Fragment"

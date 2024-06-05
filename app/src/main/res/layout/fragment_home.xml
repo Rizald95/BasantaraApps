@@ -1,22 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".interfaces.home.ui.home.HomeFragment">
 
+    <!-- TextView "Selamat Datang" di pojok atas kiri -->
     <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Selamat Datang"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView "Halo {nama}" di bawah "Selamat Datang" -->
+    <TextView
+        android:id="@+id/tvHelloName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Halo, Arabella Aruna Lee"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
+
+    <!-- Custom Rectangle (rectangle_white.xml) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/customRectangleContainer"
+        android:layout_width="371dp"
+        android:layout_height="119dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/custom_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHelloName">
+
+        <!-- Content inside Custom Rectangle -->
+        <TextView
+            android:id="@+id/customRectangleContent"
+            android:layout_width="315dp"
+            android:layout_height="71dp"
+            android:layout_margin="16dp"
+            android:text="Sebuah kelompok orang yang terhubung melalui platform online dan juga melakukan pertemuan tatap muka untuk belajar dan berdiskusi tentang bahasa isyarat dan komunikasi non-verbal."
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- TextView "Topik Pembelajaran" di bawah custom rectangle -->
+    <TextView
+        android:id="@+id/tvTopikPembelajaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:text="Topik Pembelajaran"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customRectangleContainer" />
+
+    <!-- RecyclerView for displaying 3 CardViews -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTopikPembelajaran"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_menu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

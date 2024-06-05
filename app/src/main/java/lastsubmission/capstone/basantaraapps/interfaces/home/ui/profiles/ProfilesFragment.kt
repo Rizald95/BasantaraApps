@@ -1,4 +1,4 @@
-package lastsubmission.capstone.basantaraapps.interfaces.home.ui.notifications
+package lastsubmission.capstone.basantaraapps.interfaces.home.ui.profiles
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import lastsubmission.capstone.basantaraapps.databinding.FragmentNotificationsBinding
 
-class NotificationsFragment : Fragment() {
+class ProfilesFragment : Fragment() {
 
     private var _binding: FragmentNotificationsBinding? = null
 
@@ -23,7 +23,7 @@ class NotificationsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+            ViewModelProvider(this).get(ProfilesViewModel::class.java)
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
