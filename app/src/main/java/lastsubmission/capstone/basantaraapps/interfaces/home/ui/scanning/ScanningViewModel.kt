@@ -1,10 +1,10 @@
-package lastsubmission.capstone.basantaraapps.interfaces.home.ui.dashboard
+package lastsubmission.capstone.basantaraapps.interfaces.home.ui.scanning
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class ScanningViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"
