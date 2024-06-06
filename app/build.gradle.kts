@@ -87,4 +87,11 @@ dependencies {
     implementation("com.github.yalantis:ucrop:2.2.8")
 
 
+    //cameraX
+    val cameraxVersion = "1.3.0"
+    implementation("androidx.camera:camera-camera2:$cameraxVersion")
+    implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
+    implementation("androidx.camera:camera-view:$cameraxVersion")
+
+
 }
