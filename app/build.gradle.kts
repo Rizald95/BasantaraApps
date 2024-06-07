@@ -94,4 +94,9 @@ dependencies {
     implementation("androidx.camera:camera-view:$cameraxVersion")
 
 
+    //Material design
+    implementation ("com.google.android.material:material:1.4.0")
+
+
+
 }
