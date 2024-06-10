@@ -55,7 +55,7 @@
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:gravity="center"
-                        android:fontFamily="@font/poppins_bold" />
+                        android:fontFamily="@font/poppins_bold_options" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
