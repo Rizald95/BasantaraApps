@@ -32,7 +32,8 @@
                     android:layout_height="120dp"
                     android:scaleType="centerCrop"
                     app:shapeAppearanceOverlay="@style/avatar_shape"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    tools:srcCompat="@tools:sample/avatars"
+                    android:background="@drawable/circle_ava"/>
             </RelativeLayout>
 
             <androidx.cardview.widget.CardView
