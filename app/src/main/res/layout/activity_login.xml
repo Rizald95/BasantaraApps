@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp">
 
-            <EditText
+            <lastsubmission.capstone.basantaraapps.interfaces.custom.EditTextCustom
                 android:id="@+id/etPassword"
                 android:layout_width="295dp"
                 android:layout_height="45dp"
@@ -105,6 +105,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.514" />
+
+
+            <!--            <EditText-->
+<!--                android:id="@+id/etPassword"-->
+<!--                android:layout_width="295dp"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:background="@drawable/input_background"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:gravity=""-->
+<!--                android:hint="Masukan password anda"-->
+<!--                android:padding="1dp"-->
+<!--                android:layout_marginBottom="1sp"-->
+<!--                android:paddingStart="29sp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/ivEye"-->
+<!--                app:layout_constraintHorizontal_bias="0.368"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintVertical_bias="0.514" />-->
 
             <ImageView
                 android:id="@+id/ivEye"

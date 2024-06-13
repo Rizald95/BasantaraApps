@@ -26,5 +26,6 @@
     <string name="basantara">BASANTARA</string>
     <string name="searchbar_hint">Cari Alphabet A - Z</string>
     <string name="icon_description">icon  basantara\n</string>
+    <string name="invalid_password">Password Salah\n</string>
 
 </resources>
