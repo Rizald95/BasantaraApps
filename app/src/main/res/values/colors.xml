@@ -10,4 +10,6 @@
     <color name="list">#D2333333</color>
     <color name="alpha">#939393</color>
     <color name="alpha2">#615D5D</color>
+    <color name="profile">#efebf7</color>
+    <color name="font_profile">#5E5E5E</color>
 </resources>

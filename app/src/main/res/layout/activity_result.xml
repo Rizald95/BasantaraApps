@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@id/centerTitle" />
 
     <TextView
-        android:id="@+id/scanningResult"
+        android:id="@+id/scanResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -69,6 +69,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Explanation Layout -->
+
     <TextView
         android:id="@+id/explanationTitle"
         android:layout_width="wrap_content"
@@ -77,23 +79,19 @@
         android:layout_marginTop="36dp"
         android:text="Penjelasan"
         android:textSize="18sp"
-        app:layout_constraintMarginStart="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scanningResult" />
+        app:layout_constraintTop_toBottomOf="@id/scanResult" />
 
-    <!-- Explanation Layout -->
-
- <Button
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:id="@+id/openBottomSheet"
-     android:text="Deskripsi Penjelasan Lengkap"
-     app:layout_constraintTop_toBottomOf="@+id/explanationTitle"
-     app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintEnd_toEndOf="parent"
-     android:layout_marginTop="30dp" />
-
-
-
+    <Button
+        android:id="@+id/openBottomSheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Deskripsi Penjelasan Lengkap"
+        app:layout_constraintTop_toBottomOf="@id/explanationTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
