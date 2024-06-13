@@ -17,7 +17,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "API_URL", "\"\"")
+        buildConfigField("String", "API_URL", "\"https://basantara-api-2akzaauh3q-et.a.run.app/\"")
     }
 
     buildTypes {
@@ -98,6 +98,17 @@ dependencies {
 
     //Material design
     implementation ("com.google.android.material:material:1.4.0")
+
+    //datastore
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
+
+
+    //Paging
+    implementation("androidx.paging:paging-runtime-ktx:3.3.0")
+    implementation("androidx.paging:paging-runtime:3.3.0")
+    implementation("androidx.room:room-paging:2.6.1")
+
+
 
 
 
