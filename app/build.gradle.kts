@@ -40,6 +40,7 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+        mlModelBinding = true
     }
 }
 
@@ -65,6 +66,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-common-java8:2.7.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+    implementation("org.tensorflow:tensorflow-lite-support:0.1.0")
 
 
     //Testing

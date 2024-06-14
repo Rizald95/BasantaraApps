@@ -10,10 +10,31 @@ import lastsubmission.capstone.basantaraapps.data.responses.AlphabetResponseItem
 import lastsubmission.capstone.basantaraapps.data.retrofit.ApiService
 import lastsubmission.capstone.basantaraapps.helper.Result
 import kotlinx.coroutines.flow.Flow
+import lastsubmission.capstone.basantaraapps.data.responses.LoginUserResponse
+import lastsubmission.capstone.basantaraapps.data.responses.RegisterUserResponse
 
 class UserRepository private constructor( private val userModelPreferences: UserModelPreferences, private val apiService: ApiService) {
 
+    fun register(username: String, email: String, password: String): LiveData<Result<RegisterUserResponse>> = liveData(Dispatchers.IO) {
+        emit(Result.Loading)
+        try {
+            val response = apiService.register(username, email, password)
+            emit(Result.Success(response))
 
+        } catch (e: Exception) {
+            emit(Result.Error(e.message.toString()))
+        }
+    }
+
+    fun login(email: String, password: String): LiveData<Result<LoginUserResponse>> = liveData(Dispatchers.IO) {
+        emit(Result.Loading)
+        try {
+            val response = apiService.login(email, password)
+            emit(Result.Success(response))
+        }catch (e: Exception) {
+            emit(Result.Error(e.message.toString()))
+        }
+    }
 
 
     fun getListAlphabets(): LiveData<Result<List<AlphabetResponseItem>>> = liveData(Dispatchers.IO) {

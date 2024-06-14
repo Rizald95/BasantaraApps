@@ -34,15 +34,13 @@ class LoginActivity : AppCompatActivity() {
         binding.tvRegister.startAnimation(fadeInAnimation)
 
         binding.btnLogin.setOnClickListener {
-            binding.btnLogin.setOnClickListener {
-                val email = binding.etEmail.text.toString().trim()
-                val password = binding.etPassword.text.toString().trim()
+            val email = binding.etEmail.text.toString().trim()
+            val password = binding.etPassword.text.toString().trim()
 
-                if (validateLogin(email, password)) {
-                    replaceHomeFragment()
-                } else {
-                    Toast.makeText(this, "Email atau Password salah", Toast.LENGTH_SHORT).show()
-                }
+            if (validateLogin(email, password)) {
+                replaceHomeFragment()
+            } else {
+                Toast.makeText(this, "Email atau Password salah", Toast.LENGTH_SHORT).show()
             }
         }
 
