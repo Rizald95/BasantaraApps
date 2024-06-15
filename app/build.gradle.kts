@@ -17,7 +17,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField("String", "API_URL", "\"\"")
+        buildConfigField("String", "API_URL", "\"https://basantara-api-2akzaauh3q-et.a.run.app/\"")
     }
 
     buildTypes {
@@ -40,6 +40,7 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+        mlModelBinding = true
     }
 }
 
@@ -65,6 +66,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-common-java8:2.7.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+    implementation("org.tensorflow:tensorflow-lite-support:0.1.0")
 
 
     //Testing
@@ -98,6 +100,17 @@ dependencies {
 
     //Material design
     implementation ("com.google.android.material:material:1.4.0")
+
+    //datastore
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
+
+
+    //Paging
+    implementation("androidx.paging:paging-runtime-ktx:3.3.0")
+    implementation("androidx.paging:paging-runtime:3.3.0")
+    implementation("androidx.room:room-paging:2.6.1")
+
+
 
 
 

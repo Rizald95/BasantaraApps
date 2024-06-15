@@ -8,10 +8,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import lastsubmission.capstone.basantaraapps.databinding.FragmentDashboardBinding
+import lastsubmission.capstone.basantaraapps.databinding.FragmentScanningBinding
 
 class ScanningFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentScanningBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +26,7 @@ class ScanningFragment : Fragment() {
         val dashboardViewModel =
             ViewModelProvider(this).get(ScanningViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentScanningBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
