@@ -23,14 +23,14 @@ import lastsubmission.capstone.basantaraapps.R
 import lastsubmission.capstone.basantaraapps.databinding.ActivityUploadBinding
 import com.yalantis.ucrop.UCrop
 import lastsubmission.capstone.basantaraapps.helper.ImageClassifierHelper
-import org.tensorflow.lite.task.vision.classifier.ImageClassifier
+
 import java.io.File
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 class UploadActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUploadBinding
-    private lateinit var imageClassifier: ImageClassifier
+
     private lateinit var imageClassifierHelper: ImageClassifierHelper
 
     private lateinit var imageCapture: ImageCapture

@@ -17,6 +17,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         // Delay selama 3 detik sebelum beralih ke LoginActivity
         Handler(Looper.getMainLooper()).postDelayed({
