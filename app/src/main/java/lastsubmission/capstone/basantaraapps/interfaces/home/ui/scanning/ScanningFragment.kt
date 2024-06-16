@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import lastsubmission.capstone.basantaraapps.databinding.FragmentDashboardBinding
+
 import lastsubmission.capstone.basantaraapps.databinding.FragmentScanningBinding
 
 class ScanningFragment : Fragment() {
@@ -23,16 +23,13 @@ class ScanningFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(ScanningViewModel::class.java)
+
 
         _binding = FragmentScanningBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+
         return root
     }
 
