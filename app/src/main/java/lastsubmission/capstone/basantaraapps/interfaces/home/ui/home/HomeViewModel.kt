@@ -3,6 +3,7 @@ package lastsubmission.capstone.basantaraapps.interfaces.home.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import lastsubmission.capstone.basantaraapps.repository.UserRepository
 
 class HomeViewModel(private val userRepository: UserRepository): ViewModel() {
@@ -11,4 +12,5 @@ class HomeViewModel(private val userRepository: UserRepository): ViewModel() {
         value = "This is home Fragment"
     }
     val text: LiveData<String> = _text
+
 }

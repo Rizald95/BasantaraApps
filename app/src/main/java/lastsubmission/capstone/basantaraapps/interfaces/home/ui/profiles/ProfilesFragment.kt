@@ -1,5 +1,6 @@
 package lastsubmission.capstone.basantaraapps.interfaces.home.ui.profiles
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,8 +15,6 @@ class ProfilesFragment : Fragment() {
 
     private var _binding: FragmentProfilesBinding?= null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -29,10 +28,15 @@ class ProfilesFragment : Fragment() {
         _binding = FragmentProfilesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        // Fetch username from SharedPreferences
+        val sharedPreferences = activity?.getSharedPreferences("UserPreferences", Context.MODE_PRIVATE)
+        val username = sharedPreferences?.getString("username", "Username not found")
+
+        // Set the username to the TextView
+        binding.tvName.text = username
+
+
+
         return root
     }
 
