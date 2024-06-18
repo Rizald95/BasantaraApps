@@ -10,7 +10,6 @@ import lastsubmission.capstone.basantaraapps.data.responses.AlphabetResponseItem
 import lastsubmission.capstone.basantaraapps.data.retrofit.ApiService
 import lastsubmission.capstone.basantaraapps.helper.Result
 import kotlinx.coroutines.flow.Flow
-import lastsubmission.capstone.basantaraapps.data.responses.LoginUserResponse
 import lastsubmission.capstone.basantaraapps.data.responses.RegisterUserResponse
 
 class UserRepository private constructor( private val userModelPreferences: UserModelPreferences, private val apiService: ApiService) {

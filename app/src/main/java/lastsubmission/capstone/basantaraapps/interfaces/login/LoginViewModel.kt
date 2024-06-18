@@ -3,7 +3,6 @@ package lastsubmission.capstone.basantaraapps.interfaces.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.ViewModel
-import lastsubmission.capstone.basantaraapps.data.responses.LoginUserResponse
 import lastsubmission.capstone.basantaraapps.repository.UserRepository
 import lastsubmission.capstone.basantaraapps.helper.Result
 

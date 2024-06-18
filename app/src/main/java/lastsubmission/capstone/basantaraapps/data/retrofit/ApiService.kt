@@ -9,6 +9,7 @@ import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.Call
 
 interface ApiService  {
 
@@ -39,6 +40,10 @@ interface ApiService  {
 
     @GET("api/alphabets")
     suspend fun getAlphabet() : AlphabetResponse
+
+
+    @GET("api/alphabets")
+    fun getAlphabets(): Call<AlphabetResponse>
 
     @GET("api/alphabets")
     suspend fun getAlphabetOptional(): List<AlphabetResponseItem>
