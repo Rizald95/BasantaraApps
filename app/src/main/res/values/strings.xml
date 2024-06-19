@@ -33,5 +33,6 @@
     <string name="gallery">Gallery</string>
     <string name="upload">Upload</string>
     <string name="image_classifier_failed">Gagal menganalisa gambar</string>
+    <string name="empty_image">Tidak ada gambar</string>
 
 </resources>
