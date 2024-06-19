@@ -3,7 +3,7 @@ package lastsubmission.capstone.basantaraapps.interfaces.home
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import lastsubmission.capstone.basantaraapps.R
-import lastsubmission.capstone.basantaraapps.databinding.ActivityMainBinding
+
 import android.Manifest
 import android.app.Activity
 import android.content.Intent
@@ -17,16 +17,26 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import com.yalantis.ucrop.UCrop
+import lastsubmission.capstone.basantaraapps.databinding.ActivityMainBinding
+import lastsubmission.capstone.basantaraapps.helper.ImageClassifierHelper
 import lastsubmission.capstone.basantaraapps.helper.getImageUri
 import lastsubmission.capstone.basantaraapps.interfaces.camera.CameraActivity
 import lastsubmission.capstone.basantaraapps.interfaces.camera.CameraActivity.Companion.CAMERAX_RESULT
+import lastsubmission.capstone.basantaraapps.interfaces.result.ResultActivity
+import org.tensorflow.lite.task.vision.classifier.Classifications
+import org.tensorflow.lite.task.vision.classifier.ImageClassifier
 import java.io.File
+import java.text.DecimalFormat
+import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivityMainBinding
     private var currentImageUri: Uri? = null
+
+    private lateinit var imageClassifier: ImageClassifier
+    private lateinit var imageClassifierHelper: ImageClassifierHelper
 
     private val requestPermissionLauncher =
         registerForActivityResult(
@@ -57,7 +67,12 @@ class MainActivity : AppCompatActivity() {
         binding.galleryButton.setOnClickListener { startGallery() }
         binding.cameraButton.setOnClickListener { startCamera() }
         binding.cameraXButton.setOnClickListener { startCameraX() }
-        binding.uploadButton.setOnClickListener { uploadImage() }
+        binding.uploadButton.setOnClickListener {
+            currentImageUri?.let { uri ->
+                analyzeImage(uri)
+
+            }?: showToast(getString(R.string.empty_image))
+        }
 
     }
 
@@ -143,6 +158,51 @@ class MainActivity : AppCompatActivity() {
 
     private fun uploadImage() {
         Toast.makeText(this, "Fitur ini belum tersedia", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun analyzeImage(uri: Uri) {
+        imageClassifierHelper = ImageClassifierHelper(
+            context = this,
+            classifierListener = object : ImageClassifierHelper.ClassifierListener {
+                override fun onError(error: String) {
+                    runOnUiThread {
+                        Toast.makeText(this@MainActivity, error, Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onResults(results: List<Classifications>?, inferenceTime: Long) {
+                    runOnUiThread {
+                        results?.let { it ->
+                            if (it.isNotEmpty() && it[0].categories.isNotEmpty()) {
+                                println(it)
+                                val sortedCategories =
+                                    it[0].categories.sortedByDescending { it?.score }
+                                val displayResult =
+                                    sortedCategories.joinToString("\n") {
+                                        "${it.label} " + DecimalFormat("#.##").format(it.score).trim()
+                                            .format(it.score).trim()
+                                    }
+                                moveResultIntent(uri, displayResult)
+                            }
+                        }
+                    }
+                }
+            }
+        )
+        imageClassifierHelper.classifyStaticImage(uri)
+    }
+    
+    private fun moveResultIntent(uri: Uri, result: String) {
+        val intent = Intent(this, ResultActivity::class.java).apply {
+            putExtra(ResultActivity.EXTRA_IMAGE_URI, uri.toString())
+            putExtra(ResultActivity.EXTRA_RESULT, result)
+        }
+        startActivity(intent)
+
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     companion object {

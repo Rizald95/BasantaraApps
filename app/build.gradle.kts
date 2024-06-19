@@ -72,6 +72,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
 
+
     //Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -84,9 +85,12 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 
     //splashscreen
+    implementation("org.tensorflow:tensorflow-lite-metadata:0.1.0")
     implementation("androidx.core:core-splashscreen:1.0.1")
 
     //Tensorflow
+    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4")
+
 
     //uCrop
     implementation("com.github.yalantis:ucrop:2.2.8")
