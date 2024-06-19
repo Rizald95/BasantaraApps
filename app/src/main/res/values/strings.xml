@@ -32,5 +32,6 @@
     <string name="camera_x">Camera X</string>
     <string name="gallery">Gallery</string>
     <string name="upload">Upload</string>
+    <string name="image_classifier_failed">Gagal menganalisa gambar</string>
 
 </resources>
