@@ -1,15 +1,14 @@
 <resources>
-    <string name="app_name">BasantaraApps</string>
+    <string name="app_name">Basantara</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_dashboard">Live Scanning</string>
     <string name="title_notifications">Notifications</string>
     <string name="bottom_scanning">Scanning</string>
     <string name="bottom_profile">Profile</string>
     <string name="back_arrow">Kembali</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
 
     <string name="_01">01</string>
@@ -29,5 +28,9 @@
     <string name="invalid_password">Password Salah\n</string>
     <string name="failed_login">gagal login</string>
     <string name="message_login">Akhirnya masuk</string>
+    <string name="camera">Camera</string>
+    <string name="camera_x">Camera X</string>
+    <string name="gallery">Gallery</string>
+    <string name="upload">Upload</string>
 
 </resources>

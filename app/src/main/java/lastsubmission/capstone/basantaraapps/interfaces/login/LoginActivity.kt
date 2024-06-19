@@ -84,7 +84,7 @@ class LoginActivity : AppCompatActivity() {
                 val password = etPassword.text.toString().trim()
 
                 if (email.isNotEmpty() && password.isNotEmpty()) {
-                    loginViewModel.login(email, password)
+                    loginViewModel.login_optional(email, password)
                 } else {
                     Toast.makeText(
                         this@LoginActivity,

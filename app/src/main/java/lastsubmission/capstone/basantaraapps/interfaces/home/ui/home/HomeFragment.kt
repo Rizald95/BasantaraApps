@@ -13,6 +13,7 @@ import lastsubmission.capstone.basantaraapps.R
 import lastsubmission.capstone.basantaraapps.databinding.FragmentHomeBinding
 
 import lastsubmission.capstone.basantaraapps.interfaces.alphabet.ListAlphabet
+import lastsubmission.capstone.basantaraapps.interfaces.home.MainActivity
 import lastsubmission.capstone.basantaraapps.interfaces.home.ui.scanning.ScanningFragment
 import lastsubmission.capstone.basantaraapps.interfaces.upload.UploadActivity
 
@@ -39,7 +40,7 @@ class HomeFragment : Fragment() {
 
         // Set up intent for "scan" CardView
         binding.scan.setOnClickListener {
-            val intent = Intent(activity, UploadActivity::class.java)
+            val intent = Intent(activity, MainActivity::class.java)
             startActivity(intent)
         }
 
