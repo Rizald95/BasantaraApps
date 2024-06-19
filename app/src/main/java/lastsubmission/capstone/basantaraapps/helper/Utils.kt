@@ -87,6 +87,12 @@ fun File.reduceFileImage(): File {
     return file
 }
 
+
+fun createCustomTempFileOptional(context: Context): File {
+    val filesDir = context.externalCacheDir
+    return File.createTempFile(timeStamp, ".jpg", filesDir)
+}
+
 fun Bitmap.getRotatedBitmap(file: File): Bitmap? {
     val orientation = ExifInterface(file).getAttributeInt(
         ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_UNDEFINED

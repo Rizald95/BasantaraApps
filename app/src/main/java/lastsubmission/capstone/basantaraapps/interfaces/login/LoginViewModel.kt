@@ -12,11 +12,15 @@ class LoginViewModel(private val userRepository: UserRepository): ViewModel() {
     private val _loginAction = MediatorLiveData<Result<LoginUserResponse>>()
     val loginAction: LiveData<Result<LoginUserResponse>> = _loginAction
 
-    fun login(email: String, password: String) {
+    fun login_optional(email: String, password: String) {
         val liveData = userRepository.login(email, password)
         _loginAction.addSource(liveData) {
             result -> _loginAction.value = result
         }
 
+    }
+
+    fun login(email: String, password: String): LiveData<Result<LoginUserResponse>> {
+        return userRepository.login(email, password)
     }
 }

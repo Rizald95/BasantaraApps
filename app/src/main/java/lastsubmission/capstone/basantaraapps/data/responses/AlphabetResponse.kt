@@ -10,7 +10,7 @@ data class AlphabetResponse(
 	val alphabetResponse: List<AlphabetResponseItem> = emptyList()
 )
 
-@Parcelize
+
 data class AlphabetResponseItem(
 
 	@field:SerializedName("descriptionEN")
@@ -30,4 +30,4 @@ data class AlphabetResponseItem(
 
 	@field:SerializedName("id")
 	val id: Int? = null
-): Parcelable
+)

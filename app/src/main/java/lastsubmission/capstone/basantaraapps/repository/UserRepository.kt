@@ -11,16 +11,16 @@ import lastsubmission.capstone.basantaraapps.data.retrofit.ApiService
 import lastsubmission.capstone.basantaraapps.helper.Result
 import kotlinx.coroutines.flow.Flow
 import lastsubmission.capstone.basantaraapps.data.responses.LoginUserResponse
+import lastsubmission.capstone.basantaraapps.data.responses.RegisterUserRequest
 import lastsubmission.capstone.basantaraapps.data.responses.RegisterUserResponse
 
 class UserRepository private constructor( private val userModelPreferences: UserModelPreferences, private val apiService: ApiService) {
 
-    fun register(username: String, email: String, password: String): LiveData<Result<RegisterUserResponse>> = liveData(Dispatchers.IO) {
+    fun register(request: RegisterUserRequest): LiveData<Result<RegisterUserResponse>> = liveData(Dispatchers.IO) {
         emit(Result.Loading)
         try {
-            val response = apiService.register(username, email, password)
+            val response = apiService.register(request)
             emit(Result.Success(response))
-
         } catch (e: Exception) {
             emit(Result.Error(e.message.toString()))
         }
@@ -29,9 +29,16 @@ class UserRepository private constructor( private val userModelPreferences: User
     fun login(email: String, password: String): LiveData<Result<LoginUserResponse>> = liveData(Dispatchers.IO) {
         emit(Result.Loading)
         try {
-            val response = apiService.login(email, password)
-            emit(Result.Success(response))
-        }catch (e: Exception) {
+            val response = apiService.login(ApiService.LoginRequestBody(email, password)).execute()
+            if (response.isSuccessful) {
+                val loginResponse = response.body()!!
+                val token = loginResponse.token ?: ""
+                userModelPreferences.saveSession(UserModel(email, token, true))
+                emit(Result.Success(loginResponse))
+            } else {
+                emit(Result.Error(response.message()))
+            }
+        } catch (e: Exception) {
             emit(Result.Error(e.message.toString()))
         }
     }

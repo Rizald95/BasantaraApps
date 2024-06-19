@@ -90,17 +90,16 @@
 
             <lastsubmission.capstone.basantaraapps.interfaces.custom.EditTextCustom
                 android:id="@+id/etPassword"
-                android:layout_width="295dp"
-                android:layout_height="45dp"
+                android:layout_width="354dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="1sp"
                 android:background="@drawable/input_background"
                 android:fontFamily="@font/poppins_regular"
                 android:gravity=""
                 android:hint="Masukan password anda"
                 android:padding="1dp"
-                android:layout_marginBottom="1sp"
                 android:paddingStart="29sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/ivEye"
                 app:layout_constraintHorizontal_bias="0.368"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -125,17 +124,17 @@
 <!--                app:layout_constraintTop_toTopOf="parent"-->
 <!--                app:layout_constraintVertical_bias="0.514" />-->
 
-            <ImageView
-                android:id="@+id/ivEye"
-                android:layout_width="63dp"
-                android:layout_height="71dp"
-                android:layout_marginEnd="4dp"
-                android:padding="12dp"
-                android:src="@drawable/hide"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+<!--            <ImageView-->
+<!--                android:id="@+id/ivEye"-->
+<!--                android:layout_width="63dp"-->
+<!--                android:layout_height="71dp"-->
+<!--                android:layout_marginEnd="4dp"-->
+<!--                android:padding="12dp"-->
+<!--                android:src="@drawable/hide"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintVertical_bias="0.0" />-->
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- Button Login -->

@@ -18,6 +18,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "API_URL", "\"https://basantara-api-2akzaauh3q-et.a.run.app/\"")
+        buildConfigField("String", "API_ML", "\"https://dev-basantara-ml-api-2akzaauh3q-et.a.run.app/\"")
     }
 
     buildTypes {
@@ -66,7 +67,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-common-java8:2.7.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
-    implementation("org.tensorflow:tensorflow-lite-support:0.1.0")
+
+
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 
 
     //Testing
@@ -84,10 +87,6 @@ dependencies {
     implementation("androidx.core:core-splashscreen:1.0.1")
 
     //Tensorflow
-    // TensorFlow
-    implementation("org.tensorflow:tensorflow-lite-support:0.4.4")
-    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
-    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4")
 
     //uCrop
     implementation("com.github.yalantis:ucrop:2.2.8")
